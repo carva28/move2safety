@@ -4,5 +4,5 @@ O Super-Loura tem um período de vida bastanta curto, vive para acasalar e enfre
 
 💻 O código do move2safety encontra-se na branch master
 
-🎮 O link para jogar: https://carva28.github.io/move2safety/
+🎮 Link para o jogo: https://carva28.github.io/move2safety/
 
