@@ -49,14 +49,14 @@ function defineImagem() {
 function loadBoltPower(){
     document.getElementById('obstaculos').innerHTML += "<img id='poder' src='images/poder.png' />";
     document.getElementById('poder').style.transform = "scale("+ 0 +")";
-    document.getElementById('poder').style.left = 50 + "%";
+    document.getElementById('poder').style.left = 48 + "%";
     control_poder = setInterval(movePoder,nivelJogo);
 }
 
 function loadVeneno(){
     document.getElementById('obstaculos').innerHTML += "<img id='fraqueza' src='images/posion.png' />";
     document.getElementById('fraqueza').style.transform = "scale("+ 0 +")";
-    document.getElementById('fraqueza').style.left = 50 + "%";
+    document.getElementById('fraqueza').style.left = 48 + "%";
     control_perder = setInterval(moveVeneno,nivelJogo);
 
 }
@@ -67,7 +67,7 @@ function loadWikness(){
     document.getElementById('obstaculos').innerHTML += "<img id='fraqueza' src='images/fogo.png' />";
     document.getElementById('fraqueza').style.transform = "scale("+ 0 +")";
 
-    document.getElementById('fraqueza').style.left = 50 + "%";
+    document.getElementById('fraqueza').style.left = 48 + "%";
     control_perder = setInterval(moveFogo,nivelJogo);
 }
 
@@ -271,18 +271,18 @@ function limparPoder(){
                 }
                 x.setAttribute("autoplay", "controls");
                 document.body.appendChild(x);
-                
+
                 document.getElementById('inimigo').src="images/enemie2.png";
-            
-                
+
+
                 setTimeout(function(){  window.open("./fim.html",'_self'); }, 2500);
 
-                
+
 
             }else{
                 countExtras = 0; 
                 document.getElementById('extras').innerHTML = countExtras;
-                 var x = document.createElement("AUDIO");
+                var x = document.createElement("AUDIO");
                 if (x.canPlayType("audio/mpeg")) {
                     x.setAttribute("src","sons/insecto.mp3");
                 }
@@ -298,11 +298,11 @@ function limparPoder(){
             }
             x.setAttribute("autoplay", "controls");
             document.body.appendChild(x);
-            
+
             document.getElementById('inimigo').src="images/enemie2.png";
-            
+
             setTimeout(function(){  document.getElementById('inimigo').src="images/enemie.png"; }, 1000);
-            
+
             if(estadoInimigo == true && vitorias <= 0){
                 definirInimigo();
             } else{
@@ -362,10 +362,12 @@ function limparAtaque(){
 
             x.setAttribute("autoplay", "controls");
             document.body.appendChild(x);
+            setTimeout(function(){  window.open("./fim_perdeu.html",'_self'); }, 2500);
+
 
         }else if(estadoInimigo == true && vitorias <= 0){
             definirInimigo();
-              var x = document.createElement("AUDIO");
+            var x = document.createElement("AUDIO");
 
             if (x.canPlayType("audio/mpeg")) {
                 x.setAttribute("src","sons/perder_ponto.mp3");
@@ -375,7 +377,7 @@ function limparAtaque(){
             document.body.appendChild(x);
         }  else {
             definirInimigo();
-              var x = document.createElement("AUDIO");
+            var x = document.createElement("AUDIO");
 
             if (x.canPlayType("audio/mpeg")) {
                 x.setAttribute("src","sons/perder_ponto.mp3");
@@ -433,7 +435,7 @@ function limparVeneno(){
             definirInimigo();
         }  else {
             defineImagem();
-              var x = document.createElement("AUDIO");
+            var x = document.createElement("AUDIO");
 
             if (x.canPlayType("audio/mpeg")) {
                 x.setAttribute("src","sons/perder_ponto.mp3");

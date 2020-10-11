@@ -1,45 +1,45 @@
-<html><head>
-    <meta charset="UTF-8">
-    <title>Move to Safety</title>
-    <link rel="stylesheet" href="styles/style.css">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Move to Safety</title>
+        <link rel="stylesheet" href="styles/style.css">
 
-    <script src="scripts/p5.min.js"></script>
-    <script src="scripts/p5.dom.min.js"></script>
-    <script src="scripts/ml5.min.js" type="text/javascript"></script>
+        <script src="scripts/p5.min.js"></script>
+        <script src="scripts/p5.dom.min.js"></script>
+        <script src="scripts/ml5.min.js" type="text/javascript"></script>
 
     </head>
 
-    <body>
+    <body id="bodyDefault">
+        <h1>Move to Safety</h1>
 
-
-
-        <div id="powerPoints">
-            <img src="./images/poder.png" />
-            <p id="extras">0</p>
+        <!--        <div id="alinhaBtns">-->
+        <div id="btns">
+            <a href="./default.html"><button id="jogar">Jogar</button></a>
+            <a href="./como_jogar.html"><button id="comoJogar">Como jogar</button></a>
         </div>
+        <!--        </div>-->
 
-        <div id="vidas">
-            <img src="./images/vida.png" id="vida1" class="vidas" />
-            <img src="./images/vida.png" id="vida2" class="vidas" />
-            <img src="./images/vida.png" id="vida3" class="vidas" />
-        </div>
+        <p id="autor">© Diogo Carvalho | 2020</p>
+        <p id="for">Gamers4Nature Online Game Jam</p>
 
-        <h3>Move to Safety</h3>
+        <audio>
+            <source src="./sons/button_hover.mp3"></source>
+        Your browser isn't invited for super fun audio time.
+        </audio>
+    </body>
 
-        <!--        <h2 id="total_adquiridos"></h2>-->
+<script>
+    document.getElementById("jogar").onmouseover = function() {
+        var audio = document.getElementsByTagName("audio")[0];
+        audio.play();
+    }
 
-        <img  id="vacaLoura_img" src="images/vaca_loura.png" />
-
-        <div id="divVaca">
-        </div>
-
-        <div id="obstaculos">
-            <!--        <img id="poder" src="images/light-bolt.png" />-->
-        </div>
-
-        <img id="inimigo" src="images/enemie.png" />
+    document.getElementById("comoJogar").onmouseover = function() {
+        var audio = document.getElementsByTagName("audio")[0];
+        audio.play();
+    }
+</script>
 
 
-        <script src="scripts/sketch.js"></script>
-        <script src="scripts/challenges.js"></script>
-    </body></html>
+</html>
