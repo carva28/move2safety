@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: monumentValley;
+    src: url(../fonts/monument_valley.otf);
+}
+
+body {
+    background: url(../images/fundos/game_scenario_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+body#bodyDefault {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/fundos/game_scenario_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body#bodyGanhou {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/fundos/game_scenario_4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body#bodyPerdeu {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/fundos/game_scenario_3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    color: white;
+    font-family: monumentValley;
+}
+
+h1 {
+    margin-top: 65px;
+    font-size: 8.5rem;
+    text-align: center;
+}
+
+#bodyGanhou h1 {
+    font-size: 6rem;
+    margin-top: 40px;
+}
+
+#bodyPerdeu h1 {
+    font-size: 6rem;
+    margin-top: 80px;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+#bodyGanhou h4, #bodyPerdeu h4 {
+    color: white;
+    font-family: Segoe UI, Tahoma, Helvetica Neue, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+p {
+    color: white;
+    font-family: Segoe UI, Tahoma, Helvetica Neue, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+p#autor {
+    margin-bottom: 10px;
+}
+
+p#for {
+    font-size: 0.7rem;
+    margin-bottom: 30px;
+}
+
+#bodyGanhou p#for, #bodyGanhou p#autor {
+    color: #042626;
+}
+
+#bodyPerdeu p#for, #bodyPerdeu p#autor {
+    color: #DFF2E4;
+}
+
+video {
+    width: 100%;
+}
+
+canvas {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #DFF2E4;
+    font-size: 1.5rem;
+    font-family: monumentValley;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+
+#bodyGanhou button {
+    background-color: #042626;
+    color: white;
+}
+
+#bodyPerdeu button {
+    margin-top: 100px;
+}
+
+#btns {
+    width: 300px;
+    margin: auto;
+/*
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+*/
+}
+
+#btns a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+#btns button:first-of-type {
+    margin-bottom: 20px;
+}
+
+#btns button:hover {
+    background-color: #042626;
+    color: white;
+    cursor: pointer;
+}
+
+#bodyGanhou button:hover {
+    background-color: #DFF2E4;
+    color: black;
+    cursor: pointer;
+}
+
+#vidas {
+    width: 140px;
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: left;
+}
+
+#vidas img.vidas {
+    width: 35px;
+    margin: 0;
+}
+
+#powerPoints {
+    margin: 28px;
+    float: left;
+}
+
+#powerPoints img {
+    width: 20px;
+    float: left;
+}
+
+#powerPoints p {
+    width: 40px;
+    padding: 8px 20px;
+    background-color: white;
+    border-radius: 10px;
+    color: #2D2D2D;
+    font-size: 1rem;
+    font-family: Segoe UI, Tahoma, Helvetica Neue, Arial, sans-serif;
+    font-weight: 900;
+    position: relative;
+    top: 4px;
+    left: 10px;
+    z-index: -1;
+}
+
+#divVaca {
+    width: 400px;
+    height: 100vh;
+    margin: auto;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 200px);
+    z-index: 99;
+}
+
+#vacaLoura_teste{
+    width: 120px;
+    position: absolute;
+    bottom: 80px;
+    left: 620px;
+    background-color: red;
+}
+
+#vacaLoura_img {
+    width: 80px;
+    /* margin: auto;*/
+    /*display: none;*/
+    transform: scale(0);
+    position: absolute;
+    bottom: 80px;
+}
+
+#poder{
+    width: 60px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+
+#fraqueza{
+    width: 60px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#bolas_inimigo{
+    width: 60px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#inimigo{
+    width:80px;
+    margin: auto;
+    display: none;
+    position: absolute;
+    left: calc(50% - 40px);
+}
+
+#vitoria {
+    width: 500px;
+    margin: 50px auto 10px;
+    display: block;
+}
+
+#instrucoes {
+    width: 40%;
+    min-width: 600px;
+    margin: 70px auto 50px;
+    padding: 50px 100px 40px;
+    background-color: rgba(223, 242, 228, 0.8);
+}
+
+#instrucoes h4 {
+    font-family: monumentValley;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #042626;
+    margin-bottom: 35px;
+}
+
+#instrucoes p {
+    font-family: Segoe UI, Tahoma, Helvetica Neue, Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 100;
+    text-align: left;
+    color: #2D2D2D;
+    margin-bottom: 40px;
+    line-height: 1.4rem;
+}
+
+#instrucoes p:first-of-type {
+    margin-bottom: 10px;
+}
+
+#instrucoes button {
+    margin-bottom: 0;
+}
